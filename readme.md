@@ -15,9 +15,8 @@ yarn build:dev
 yoki
 <br>
 npm run build:dev
-.................
-<br>
-<br>
+
+<br><br>
 yarn start:dev
 yoki
 npm run start:dev
@@ -28,9 +27,8 @@ yarn build:prod
 yoki
 <br>
 npm run build:prod
-<br>
-<br>
-..................
+<br><br>
+
 yarn start:prod
 <br>
 yoki
