@@ -1,7 +1,6 @@
 const path = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin"); // Use Terser instead of UglifyJsPlugin
 
 module.exports = {
 	entry: {
@@ -18,25 +17,13 @@ module.exports = {
 	},
 	mode: "production",
 	target: "node",
-	// externalPresets : {node: true},
-	externals: [nodeExternals()], // Need this to avoid error when working with Express,
-	// optimization: {
-	//     minimize: true,
-	//     minimizer: [
-	//         new TerserPlugin({
-	//             terserOptions: {
-	//                 keep_classnames: true,
-	//                 keep_fnames: true,
-	//                 mangle: false
-	//             }
-	//         })
-	//     ]
-	// },
+	externals: [nodeExternals()],
 	optimization: {
 		minimize: true,
 		minimizer: [
-			new UglifyJsPlugin({
-				include: /\.min\.js$/,
+			new TerserPlugin({
+				// Using Terser for minification
+				test: /\.min\.js$/,
 			}),
 		],
 	},
@@ -45,8 +32,25 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: "babel-loader",
+				use: {
+					loader: "babel-loader",
+					options: {
+						// You can specify babel options here if needed
+					},
+				},
 			},
 		],
+	},
+	resolve: {
+		fallback: {
+			// Add any necessary polyfills for Node.js core modules
+			crypto: require.resolve("crypto-browserify"),
+			path: require.resolve("path-browserify"),
+			url: require.resolve("url/"),
+			buffer: require.resolve("buffer/"),
+			zlib: require.resolve("browserify-zlib"),
+			querystring: require.resolve("querystring-es3"),
+			util: require.resolve("util/"),
+		},
 	},
 };
