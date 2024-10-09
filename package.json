@@ -1,0 +1,47 @@
+{
+	"name": "express_task",
+	"version": "1.0.0",
+	"main": "index.js",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"scripts": {
+		"test": "cross-env NODE_ENV=test PORT=5001 mocha --exit",
+		"start:dev": "node ./dev-build/main.js",
+		"start:prod": "node ./prod-build/index.js",
+		"start:prod:optimization": "node ./prod-build-optimization/main.js",
+		"build:dev": "webpack --config webpack.dev.js --mode development",
+		"build:prod": "webpack --config webpack.prod.js --mode production"
+	},
+	"dependencies": {
+		"@babel/core": "^7.25.7",
+		"@babel/preset-env": "^7.25.7",
+		"babel-loader": "^9.2.1",
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.20.3",
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.0",
+		"joi": "^17.13.3",
+		"jsonwebtoken": "^9.0.2",
+		"lodash": "^4.17.21",
+		"mongodb-client-encryption": "^6.1.0",
+		"mongoose": "^8.7.0",
+		"morgan": "^1.10.0",
+		"nodemon": "^3.1.7"
+	},
+	"devDependencies": {
+		"chai": "4.3.0",
+		"chai-http": "4.3.0",
+		"colors": "^1.4.0",
+		"cross-env": "^7.0.3",
+		"mocha": "^10.7.3",
+		"terser-webpack-plugin": "^5.3.10",
+		"uglifyjs-webpack-plugin": "^2.2.0",
+		"webpack": "^5.95.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-node-externals": "^3.0.0"
+	}
+}
