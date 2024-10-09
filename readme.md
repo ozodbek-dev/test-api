@@ -1,28 +1,37 @@
-# NODE VERSON 20.17.0 BO'LISHI KERAK 
-# YARN  VERSION 1.22.22 
+# NODE VERSON 20.17.0 BO'LISHI KERAK
+
+# YARN VERSION 1.22.22
+
 # NPM VERSON 10.8.2 BO'LISHI KERAK
 
 # test qilish
-  yarn test
-  npm run test
+
+yarn test
+npm run test
 
 # Development deploy uchun build
-  yarn build:dev 
-  yoki
-  <br>
-  npm run build:dev 
-  .................
-  yarn start:dev 
-  yoki
-  npm run start:dev 
+
+yarn build:dev
+yoki
+<br>
+npm run build:dev
+.................
+<br>
+<br>
+yarn start:dev
+yoki
+npm run start:dev
 
 # Production depoloy uchun build
-  yarn build:prod 
-  yoki
-    <br>
-  npm run build:prod
-  ..................
-  yarn start:prod 
-    <br>
-  yoki
-  npm run start:prod
+
+yarn build:prod
+yoki
+<br>
+npm run build:prod
+<br>
+<br>
+..................
+yarn start:prod
+<br>
+yoki
+npm run start:prod
