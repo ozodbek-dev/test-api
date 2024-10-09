@@ -1,6 +1,6 @@
-# /////////////NODE VERSON 20.17.0 BO'LISHI KERAK //////////////
-# /////////////YARN  VERSION 1.22.22 ///////////////////////////
-# /////////////NPM VERSON 10.8.2 BO'LISHI KERAK ////////////////
+# NODE VERSON 20.17.0 BO'LISHI KERAK 
+# YARN  VERSION 1.22.22 
+# NPM VERSON 10.8.2 BO'LISHI KERAK
 
 # test qilish
   yarn test
