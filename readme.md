@@ -9,6 +9,7 @@
 # Development deploy uchun build
   yarn build:dev 
   yoki
+  <br>
   npm run build:dev 
   .................
   yarn start:dev 
@@ -18,8 +19,10 @@
 # Production depoloy uchun build
   yarn build:prod 
   yoki
+    <br>
   npm run build:prod
   ..................
   yarn start:prod 
+    <br>
   yoki
   npm run start:prod
